@@ -1,6 +1,29 @@
 module.exports = function(schema, option) {
   const { _, prettier } = option;
 
+  // header
+  const header = `
+    <meta charset="UTF-8">
+    <title>平安Max卡</title>
+    <meta name="description" content="平安Max卡">
+    <meta name="keywords" content="平安Max卡">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="WT.pageID" content="XJDK-MAX-IBANK-HOMEPAGE">
+    <meta name="WT.title" content="平安Max卡">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="../../../new-pages/js/flexible-v2.js"></script>
+    <script src="../../UImode/js/vue2.6.10.js"></script>
+    <script src="https://cdn.sdb.com.cn/poppy/5.0-latest/poppy.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.sdb.com.cn/poppy/5.0-latest/poppy.rem.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  `;
+
   // template
   const template = [];
 
@@ -468,6 +491,44 @@ module.exports = function(schema, option) {
           prettierOpt
         ),
         panelType: 'vue'
+      },
+      {
+        panelName: `index.html`,
+        panelValue: prettier.format(
+          `
+          <!DOCTYPE html>
+          <html lang="zh-CN">
+          <head>
+              ${header}
+          </head>
+          <body>
+            <div id="app"></div>
+            <template id="my-template">
+              ${template}
+            </template>
+            <script type="text/javascript">
+              let ops = {
+                data: function() {
+                    return{
+                        
+                    }
+                },
+                methods: {
+                    navbar_goBack(idx, item) {
+                        console.log('idx', idx)
+                        console.log('item', item)
+                    },
+                },
+                el: '#app',
+                template: document.getElementById('my-template').innerHTML
+              }
+              new Vue(ops)
+            </script>
+          </body>
+        `,
+          prettierOpt
+        ),
+        panelType: 'html'
       },
       {
         panelName: 'index.css',
