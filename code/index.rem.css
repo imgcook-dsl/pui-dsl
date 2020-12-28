@@ -1,0 +1,147 @@
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 7.12rem;
+}
+
+.bd {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: row;
+  opacity: 1;
+  width: 4.56rem;
+  height: 4.56rem;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4.56rem;
+  height: 4.56rem;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 4.56rem;
+  height: 4.56rem;
+}
+
+.wrap {
+  box-sizing: border-box;
+  display: flex;
+  position: absolute;
+  top: 0.24rem;
+  left: 0.24rem;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-right: 0.12rem;
+  padding-left: 0.13rem;
+  height: 0.4rem;
+}
+
+.riverdinwei {
+  opacity: 1;
+  width: 0.19rem;
+  height: 0.24rem;
+}
+
+.distance {
+  margin-left: 0.05rem;
+  width: 1.12rem;
+  height: 0.29rem;
+  line-height: 0.29rem;
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 0.24rem;
+  font-weight: 400;
+}
+
+.main {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 4.56rem;
+  height: 1.52rem;
+}
+
+.title {
+  margin-top: 0.29rem;
+  width: 4rem;
+  height: 1.17rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 0.59rem;
+  color: #333333;
+  font-size: 0.4rem;
+  font-weight: 400;
+}
+
+.ft {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom-left-radius: 0.16rem;
+  border-bottom-right-radius: 0.16rem;
+  background-color: #ffffff;
+  padding-right: 0.23rem;
+  padding-left: 0.24rem;
+  width: 4.56rem;
+  height: 1.04rem;
+  overflow: hidden;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 0.4rem;
+}
+
+.xianjin {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+
+.fashionHome {
+  margin-left: 0.08rem;
+  line-height: 0.37rem;
+  white-space: nowrap;
+  color: #666666;
+  font-size: 0.32rem;
+  font-weight: 300;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 0.4rem;
+}
+
+.favorite {
+  width: 0.29rem;
+  height: 0.29rem;
+}
+
+.num {
+  margin-left: 0.07rem;
+  line-height: 0.35rem;
+  white-space: nowrap;
+  color: #999999;
+  font-size: 0.29rem;
+  font-weight: 400;
+}

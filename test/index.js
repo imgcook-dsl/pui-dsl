@@ -46,11 +46,13 @@ co(function*() {
     );
 
     const prettierOpt = renderInfo.prettierOpt || {
-      printWidth: 120
+      parser: 'vue',
+      printWidth: 80,
+      singleQuote: true
     };
 
     const prettierRes = prettier.format(ret, prettierOpt);
 
-    fs.writeFileSync(path.join(__dirname,'../code/result.js'), prettierRes);
+    fs.writeFileSync(path.join(__dirname,'../code/result.vue'), prettierRes);
   }
 });
