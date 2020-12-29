@@ -362,6 +362,26 @@ module.exports = function(schema, option) {
           xml = `<div${classString}${props} />`;
         }
         break;
+      case 'tab_two':
+        console.log('=========', schema)
+        xml = `<poppy-tab
+                inline
+                v-model="selected1"
+                :data="listwithTwoValue"
+              ></poppy-tab>`
+        break;
+      case 'button_primary':
+        console.log('=========', schema)
+        xml = `<poppy-button type="primary">主要操作Normal</poppy-button>`
+        break;
+      case 'button_plain':
+        console.log('=========', schema)
+        xml = `<poppy-button type="plain">次要操作Normal</poppy-button>`
+        break;
+      case 'poppy_icon_arrow_up':
+        console.log('=========', schema)
+        xml = `<poppy-icon name="arrow_up" />`
+        break;
       default:
         if (schema.children && schema.children.length) {
           xml = `<div${classString}${props}>${transform(schema.children)}</div>`;
